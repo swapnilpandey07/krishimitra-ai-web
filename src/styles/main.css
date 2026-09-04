@@ -1,0 +1,181 @@
+/* Custom Design System for KrishiMitra-AI */
+:root {
+  --bg-earth: #F7F3E8;
+  --primary-green: #55703B;
+  --primary-green-dark: #3E532A;
+  --primary-green-bg: #EAF0E4;
+  --harvest-gold: #C9942F;
+  --harvest-gold-light: #F5E8C7;
+  --weather-blue: #4F7285;
+  --weather-blue-light: #E3ECF0;
+  --alert-red: #A8452B;
+  --alert-red-light: #F8E8E4;
+  --text-dark: #2C221E;
+  --text-muted: #6E655F;
+  --card-bg: #FFFFFF;
+  --border-earth: #E2DAC8;
+}
+
+body {
+  background-color: var(--bg-earth);
+  color: var(--text-dark);
+  font-family: 'IBM Plex Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Fraunces', serif;
+  font-optical-sizing: auto;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #EFE9DB;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4B9A5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-green);
+}
+
+/* Card Styling - Clean AgTech Aesthetics, no glassmorphism or neon */
+.krishi-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-earth);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(44, 34, 30, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.krishi-card:hover {
+  border-color: #CBD0C4;
+  box-shadow: 0 4px 12px rgba(44, 34, 30, 0.07);
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--primary-green);
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid var(--primary-green-dark);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: var(--primary-green-dark);
+}
+.btn-primary:focus-visible {
+  outline: 2px solid var(--harvest-gold);
+  outline-offset: 2px;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: var(--text-dark);
+  font-weight: 600;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-earth);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background-color: #F2ECE0;
+  border-color: #D3C8B2;
+}
+
+/* Gold Button */
+.btn-gold {
+  background-color: var(--harvest-gold);
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #9E721D;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.btn-gold:hover {
+  background-color: #B38125;
+}
+
+/* Animated SVG Gauge */
+.gauge-background {
+  fill: none;
+  stroke: #E2DAC8;
+  stroke-width: 14;
+}
+.gauge-progress {
+  fill: none;
+  stroke: var(--primary-green);
+  stroke-width: 14;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+/* Soil NPK Meters */
+.soil-meter-bg {
+  background-color: #EAE3D2;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 10px;
+}
+.soil-meter-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modal backdrop animation */
+.modal-backdrop {
+  background-color: rgba(44, 34, 30, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+/* High contrast inputs */
+input, select, textarea {
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-earth);
+  border-radius: 8px;
+  padding: 0.625rem 0.875rem;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(85, 112, 59, 0.15);
+}
+
+/* Form badge tags */
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}

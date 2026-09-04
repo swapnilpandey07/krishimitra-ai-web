@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KrishiMitra-AI — Smart India Hackathon Agriculture Portal</title>
+  <meta name="description" content="KrishiMitra-AI helps farmers make better decisions using AI-powered crop, soil, weather, disease and market insights.">
+  
+  <!-- Google Fonts: Fraunces (Headings) + IBM Plex Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Main Styling -->
+  <link rel="stylesheet" href="./src/styles/main.css">
+  
+  <!-- Tailwind CSS CDN for utility classes support -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            earth: '#F7F3E8',
+            agriGreen: {
+              DEFAULT: '#55703B',
+              dark: '#3E532A',
+              light: '#6E8F4E',
+              bg: '#EAF0E4'
+            },
+            harvestGold: {
+              DEFAULT: '#C9942F',
+              light: '#F5E8C7',
+              dark: '#9E721D'
+            },
+            weatherBlue: {
+              DEFAULT: '#4F7285',
+              light: '#E3ECF0',
+              dark: '#354E5C'
+            },
+            alertRed: {
+              DEFAULT: '#A8452B',
+              light: '#F8E8E4',
+              dark: '#7C301D'
+            },
+            wood: '#2C221E',
+            mutedEarth: '#8C8275',
+            cardBg: '#FFFFFF',
+            borderEarth: '#E2DAC8'
+          },
+          fontFamily: {
+            heading: ['Fraunces', 'serif'],
+            body: ['"IBM Plex Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- React 18 & ReactDOM UMD -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  
+  <!-- Prop-Types for Recharts -->
+  <script src="https://unpkg.com/prop-types@15.8.1/prop-types.min.js"></script>
+  
+  <!-- Recharts UMD -->
+  <script src="https://unpkg.com/recharts@2.12.7/umd/Recharts.js"></script>
+
+  <!-- Babel Standalone for JSX parsing -->
+  <script src="https://unpkg.com/@babel/standalone@7.24.0/babel.min.js"></script>
+
+  <!-- Define global exports & module for Babel standalone -->
+  <script>
+    var exports = {};
+    var module = { exports: exports };
+  </script>
+</head>
+<body class="bg-earth text-wood font-body antialiased selection:bg-harvestGold selection:text-white min-h-screen">
+  <div id="root"></div>
+
+  <!-- Entry Bundle Script loaded via Babel -->
+  <script type="text/babel" src="./src/bundle.jsx"></script>
+</body>
+</html>
